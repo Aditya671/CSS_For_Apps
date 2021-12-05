@@ -1,0 +1,17 @@
+// Flex Alignments
+$horizontalAlignmentFlex:(
+   "left":(left),
+   "right":(right),
+   "start":(flex-start),
+   "center":(center),
+   "between":(space-between),
+   "around":(space-around),
+   "evenly":(space-evenly),
+   "end":(flex-end),
+);
+$verticalAlignmentFlex:(
+   "start":(flex-start),
+   "center":(center),
+   "end":(flex-end),
+   "baseline":(baseline)
+);

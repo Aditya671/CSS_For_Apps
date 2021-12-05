@@ -1,0 +1,28 @@
+// Position on Screen
+$positionTypes:relative,absolute,fixed,sticky;
+// Percentage
+$viewportPercent:(
+   "v25":(25%),
+   "v50":(50%),
+   "v75":(75%),
+   "v100":(100%)
+);
+// Screens
+$maxColumnWidth:(
+   "xs":(334px),
+   "sm":(576px),
+   "md":(768px),
+   "lg":(992px),
+   "xl":(1024px),
+   "xxl":(1200px),
+   "xxxl":(1400px)
+);
+$minColumnWidth:(
+   "sm":(575px),
+   "md":(767px),
+   "lg":(991px),
+   "xl":(1023px),
+   "xxl":(1199px),
+   "xxxl":(1399px),
+   "xxxxl":(1599px),
+);

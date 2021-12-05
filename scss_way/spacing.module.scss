@@ -1,0 +1,43 @@
+@import '_var';
+
+@for $i from 1 through length($gutterlength) {
+   $c: nth($gutterlength, $i);
+   $k: nth($gutterlengthKeys,$i);
+   .p-#{$k}{
+      padding: $c!important;
+   }
+   .pl-#{$k}{
+      padding-left: $c!important;
+   }
+  .pr-#{$k}{
+      padding-right: $c!important;
+   }
+   .px-#{$k}{
+      padding-left:  $c!important;
+      padding-right:  $c!important;
+   }
+   .py-#{$k}{
+      padding-top: $c!important;
+      padding-bottom: $c!important;
+   }
+   .m-#{$k}{
+      margin: $c!important;
+   }
+   .ml-#{$k}{
+      margin-left: $c!important;
+   }
+   .mr-#{$k}{
+      margin-right: $c!important;
+   }
+   .mx-#{$k}{
+      margin-left: $c!important;
+      margin-right: $c!important;
+   }
+   .my-#{$k}{
+      margin-top: $c!important;
+      margin-bottom: $c!important;
+   }
+}
+.padding-30{
+   padding: 30px 15px;
+}

@@ -1,0 +1,65 @@
+/* Mixins  */
+// Animation CSS
+@mixin animationCSS($animationValue){
+   animation: $animationValue;
+   -o-animation: $animationValue;
+   -ms-animation: $animationValue;
+   -webkit-animation: $animationValue;
+   -moz-animation: $animationValue;
+};
+// Transform CSS
+@mixin transformCSS($transformingProp){
+   -webkit-transform: $transformingProp;
+   -ms-transform: $transformingProp;
+   -o-transform: $transformingProp;
+   transform: $transformingProp;
+};
+@mixin transitionCSS($seconds){
+	transition: $seconds;
+	-webkit-transition: $seconds;
+	-moz-transition: $seconds;
+	-ms-transition: $seconds;
+	-o-transition: $seconds;
+};
+// Flex Display 
+@mixin d_flex($direction,$alignment,$content){
+	display: flex;
+	display: -ms-flex;
+	display: -webkit-flex;
+	@if $direction {
+		flex-direction: $direction;
+		-webkit-flex-direction: $direction;
+		-ms-flex-direction: $direction;	
+	};
+	@if $alignment{
+		align-items: $alignment;
+		-webkit-align-items: $alignment;
+		-ms-align-items: $alignment;
+	};
+	@if $content {
+		justify-content: $content;
+		-webkit-justify-content: $content;
+		-ms-justify-content: $content;	
+	};
+
+};
+@mixin gridColums($fValue,$i){
+	flex: 0 0 auto;
+	width: $fValue * $i;
+};
+
+@mixin screenMinMax($min,$max){
+	@media screen and (max-width:$max) and (min-width:$min) {
+		@content
+	}	
+};
+@mixin screenMin ($min){
+	@media screen and (min-width:$min){
+		@content
+	}	
+};
+@mixin screenMax ($max){
+	@media screen and (max-width:$max){
+		@content
+	}	
+}

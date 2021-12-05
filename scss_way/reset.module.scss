@@ -1,0 +1,53 @@
+@import 'var_main';
+@import 'mixins';
+
+@each $pos in $positionTypes{
+   .position-#{$pos}{
+      position: $pos;
+   }
+};
+
+.alignProperTopLeft{
+   top: 10px;
+   bottom: auto;
+   left: 10px;
+   right: auto;
+}
+.alignProperTopRight{
+   top: 10px;
+   bottom: auto;
+   left: auto;
+   right: 10px;
+}
+.alignProperBottomRight{
+   top: auto;
+   bottom: 10px;
+   left: auto;
+   right: 10px;
+}
+.alignProperBottomLeft{
+   top: auto;
+   bottom: 10px;
+   left: 10px;
+   right: auto;
+}
+.alignExactCenter{
+   top: 50%;
+   bottom: auto;
+   left: 50%;
+   right: auto;
+   @include transformCSS(translate(-50%,-50%))
+}
+img{
+   max-width: 320px;
+   cursor: pointer;
+   border-radius: 12px;
+   display: inline-block;
+   vertical-align: middle;
+}
+@media screen and (max-width:767px){
+   img{
+      // width: inherit;
+      max-width: 100%;
+   }
+}

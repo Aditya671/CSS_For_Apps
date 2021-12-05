@@ -1,0 +1,22 @@
+@import 'var_main';
+
+.btn{
+   padding:8px 12px;
+   display: inline-block;
+   margin: 0;
+   border: 1px solid #000;
+   border-radius: 4px;
+   color: #000;
+   max-width: 150px;
+   width: 100%;
+   font-weight: 700;
+}
+@each $var in $ElementSizes {
+   $s:8px;
+   @for $i from 1 to 4{
+      .btn-#{$var}{
+         display: block;
+         padding: $s*2  $s;
+      }  
+   };
+};

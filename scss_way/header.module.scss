@@ -1,0 +1,62 @@
+@import 'var_main';
+@import 'mixins';
+
+.header{
+   position: sticky;
+   top:0;
+   left: 0;
+   right: 0;
+   z-index: 10;
+   background: rgba(0,0,0,0.8);
+   @include transitionCSS(0.5s ease-in-out);
+}
+.uncollapsed{
+   padding:$v0 $v15px;
+}
+.collapsed{
+   padding: $v0 $v15px;
+}
+.sidebar{
+   position: fixed;
+   left: -320px;
+   right: auto;
+   top: $v0;
+   bottom: $v0;
+   height: $v100;
+   background: rgb(34, 34, 34);
+   display: flex;
+   flex-direction: column;
+   @include transitionCSS(0.5s ease-in-out 2s);
+   @include animationCSS(moveRtoL 1s);
+}
+.sidebar.open{
+   left:$v0;
+   min-width: 200px;
+   z-index: 100;
+   @include transitionCSS(0.5s ease-in-out);
+   @include animationCSS(moveLtoR 1s);
+}
+.sidebar.close{
+   display: none;
+   left:$v0;
+   min-width: 200px;
+   z-index: 100;
+   
+}
+@keyframes moveRtoL{
+   0%{
+      left: 0px;
+   }
+   100%{
+      left: -320px;
+   }
+}
+@keyframes moveLtoR{
+   0%{
+      left: -320px;
+   }
+
+   100%{
+      left: 0px;
+   }
+}

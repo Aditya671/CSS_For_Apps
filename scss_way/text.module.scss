@@ -1,0 +1,7 @@
+@import '_var';
+
+@each $align in $alignmenetForText{
+   .text-#{$align}{
+      text-align: $align;
+   }
+}
